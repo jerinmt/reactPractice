@@ -16,6 +16,9 @@ function EditBook() {
             setPublishedYear(response.data.published_year);
             setGenre(response.data.genre);
         })
+        .catch(error=>{
+            alert(error.response.data.message);
+        })
     },[bookId]);
     function updateBook(){
         axios.put('https://worksheet-library.mashupstack.com/books/'+bookId,{
