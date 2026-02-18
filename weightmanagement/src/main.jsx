@@ -5,6 +5,7 @@ import router from './utils/router';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import AutoLogin from './components/AutoLogin';
+import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

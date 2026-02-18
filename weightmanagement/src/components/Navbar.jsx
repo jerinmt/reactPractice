@@ -13,34 +13,23 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Weight Management</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            {username ? (
-              <>
-                <li className="nav-item">
-                  <span className="nav-link">Welcome, {username}</span>
-                </li>
-                <li className="nav-item">
-                  <button className="btn btn-link nav-link" onClick={handleLogout}>Logout</button>
-                </li>
-              </>
-            ) : (
-              <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/login">Login</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/register">Register</Link>
-                </li>
-              </>
-            )}
-          </ul>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/" style={{ fontFamily: 'Georgia, serif', fontSize: '2rem', fontWeight: 'bold', color: '#228804' }}>
+          Weight Management
+        </Link>
+        <div className="d-flex align-items-center gap-3">
+          {username ? (
+            <>
+              <span className='text-white'>Welcome, {username}</span>
+              <button className="btn btn-link" onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link className="nav-link" to="/login">Login</Link>
+              <Link className="nav-link" to="/register">Register</Link>
+            </>
+          )}
         </div>
       </div>
     </nav>
