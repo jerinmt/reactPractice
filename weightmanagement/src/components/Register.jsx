@@ -18,7 +18,7 @@ const Register = () => {
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100 bg-secondary">
+    <div className="d-flex flex-column min-vh-100 bg-light">
       <Navbar />
       <div className="container d-flex flex-grow-1 justify-content-center align-items-center">
         <div className="card shadow p-4" style={{ maxWidth: '400px', width: '100%' }}>
